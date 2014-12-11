@@ -4,6 +4,14 @@ var less = require('gulp-less');
 var path = require('path');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function () {
+    gulp.src('./styles/*.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('./build/assets/css'));
+});
 
 /*
  * # TASKS #

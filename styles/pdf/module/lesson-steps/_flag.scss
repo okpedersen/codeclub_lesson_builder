@@ -1,0 +1,12 @@
+//	remove green background and border from test
+.flag {
+    @extend %unbreakable;
+
+    border-style: solid;
+    width:        100%;
+
+	> ul > li:before {
+		/* Remove all other checkboxes */
+		border: none;
+	}
+}

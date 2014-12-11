@@ -1,0 +1,43 @@
+#legend {
+    font-family:      $font-family-secondary;
+    background-color: $color-base-light;
+    border-radius:    10px;
+    padding:          13px 38px;
+    //	very lazy. intro adds margins; this undoes them.
+    margin:           0 -20px;
+
+    .caption {
+        white-space:  nowrap;
+        width:        150px;
+        float:        left;
+        margin-right: 40px;
+        padding-top:  2px;
+    }
+
+    .description {
+        font-size:   85%;
+        padding-top: 4px;
+    }
+
+    img {
+        width:  30px;
+        margin: 0 25px 10px 0;
+        float:  left;
+    }
+
+    .check_text {
+        color: $color-warning;
+    }
+
+    .flag_text {
+        color: $color-primary-light;
+    }
+
+    .save_text {
+        color: $color-highlight;
+    }
+
+    .upper {
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,133 @@
+
+.lesson-steps {
+
+	html[lang="en-GB"] & {
+		em, i, li, p {
+			font-family: $font-family-print;
+			font-weight: 500;
+		}
+
+		b, strong {
+			font-family: $font-family-print;
+			font-weight: 700;
+		}
+
+		h1, h2 {
+			b, strong {
+				font-family: $font-family-secondary;
+			}
+		}
+	}
+
+	h1 {
+		font-size:     1.5em;
+		margin-bottom: 0.5em;
+	}
+
+	h2 {
+		font-size:     1.3em;
+		margin-bottom: 0.2em;
+	}
+
+	section {
+		margin-bottom: 1.5em;
+
+		&.intro {
+			border-bottom: 3px dotted $color-warning;
+		}
+	}
+
+	ol {
+		margin-left: 1.5em;
+
+		> li {
+			list-style: disc;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	ul {
+		margin-left: 1.5em;
+
+		> li {
+			list-style: none;
+			position:   relative;
+
+			&:before {
+				background:    rgba($color-highlight, 0.1);
+				border:        0.15em solid $color-highlight;
+				border-radius: 0.25em;
+				content:       ' ';
+				cursor:        pointer;
+				display:       block;
+				left:          -1.3em;
+				position:      absolute;
+				top:           0.2em;
+				height:        1em;
+				width:         1em;
+			}
+
+			img {
+				border:    none;
+				max-width: 100%;
+
+				&:before {
+					content: ' ';
+					display: block;
+				}
+
+				&.inline {
+					display:        inline !important;
+					margin:         0;
+					vertical-align: top;
+
+					&:before {
+						display: none;
+					}
+				}
+			}
+
+			&.activity-done {
+				font-style:      italic;
+				text-decoration: line-through;
+
+				&:before {
+					background: #3477d1;
+				}
+			}
+
+			ul li {
+				list-style: disc;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	img {
+		display:   block;
+		margin:    0 auto 1em auto;
+		max-width: 100%;
+	}
+
+	pre {
+		line-height: 1.25;
+		margin:      0 0 2em !important;
+
+		code {
+			background:  none;
+			padding:     0 !important;
+			text-indent: 0;
+		}
+	}
+
+	ul > pre {
+		margin-top: 1.25em;
+	}
+
+}

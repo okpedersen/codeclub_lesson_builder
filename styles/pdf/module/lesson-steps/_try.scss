@@ -1,0 +1,25 @@
+.try {
+    @extend %unbreakable;
+
+    background-color: $color-highlight-light;
+    border:           none;
+    margin:           0 40px;
+
+    h2 {
+        color:       black;
+        font-family: $font-family-secondary;
+    }
+
+    ul > li {
+        padding-left: 20px;
+
+        &:before {
+            background-color: white;
+            left:             -0.4em;
+        }
+    }
+
+    p {
+        margin-top: 0.75em;
+    }
+}
