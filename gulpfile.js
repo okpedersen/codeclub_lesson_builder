@@ -9,13 +9,10 @@ var gutil = require('gulp-util');
 var addsrc = require('gulp-add-src');
 var del = require('del');
 var run = require('run-sequence');
-<<<<<<< HEAD
 var request = require('request');
 var async = require('async');
-=======
 var merge = require('merge-stream');
 var _ = require('lodash');
->>>>>>> 12efb8b390fcfbbec05ef4f9365622198ac969fc
 // html building
 var build = require('./build'); // build.js in same folder
 // styles and scripts
