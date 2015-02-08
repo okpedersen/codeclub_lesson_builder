@@ -32,7 +32,10 @@
     "metalsmith-templates": "^0.6.0",
     "napa": "^1.1.0",
     "run-sequence": "^1.0.2",
-    "yaml-front-matter": "^3.2.3"
+    ""gulp-util": "^3.0.3",
+    "request": "^2.53.0",
+    "through": "^2.3.6",
+yaml-front-matter": "^3.2.3"
   },
   "napa": {
     "scratchblocks2": "blob8108/scratchblocks2#f6aecc77a9"
@@ -45,16 +48,12 @@
     "type": "git",
     "url": "https://github.com/arve0/codeclub_lesson_builder"
   },
-  "author": "Arve Seljebu, Håkon Kaurell",
+  "author": "Arve Seljebu, Håkon Kaurel",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/arve0/codeclub_lesson_builder/issues"
   },
   "homepage": "https://github.com/arve0/codeclub_lesson_builder",
   "devDependencies": {
-    "request": "^2.53.0",
-    "xml2json": "^0.5.1",
-    "xmldom": "^0.1.19",
-    "xpath": "0.0.9"
   }
 }

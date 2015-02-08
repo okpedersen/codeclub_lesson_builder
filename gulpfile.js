@@ -5,9 +5,11 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload; // reload shorthand
 var path = require('path');
+var gutil = require('gulp-util');
 var addsrc = require('gulp-add-src');
 var del = require('del');
 var run = require('run-sequence');
+var request = require('request');
 var async = require('async');
 // html building
 var build = require('./build'); // build.js in same folder
@@ -28,6 +30,7 @@ var fs = require("fs");
 var lessonRoot = '..';
 var buildRoot = path.join(lessonRoot, 'build');
 var assetsDest = path.join(buildRoot, 'assets'); // shorthand
+var dataDest = path.join(assetsDest, 'data');
 
 /*
  * # TASKS #
@@ -59,6 +62,39 @@ gulp.task('server', ['build', 'css', 'js', 'assets'], function () {
     server: { baseDir: buildRoot }
   });
 });
+
+function download_files(urls) {
+  var stream = require('through')(function(file, enc, cb) {
+      this.push(file);
+      cb();
+  });
+
+  urls.forEach(function(url) {
+    request(url.url, function(error, response, body) {
+      if(!error && (response.statusCode==200 || response.statusCode==304)) {
+        stream.queue(
+          new gutil.File({
+            path:url.filename,
+            contents: new Buffer(body)
+          })
+        )
+      } else {
+          console.log("Download failed");
+      }
+    });
+  });
+  return stream;
+}
+
+gulp.task('udir', function(cb) {
+  download_files([
+    {filename: 'kompetansemaal.json', url:'http://data.udir.no/kl06/kompetansemaal.json'},
+    {filename: 'fagkoder.json', url:'http://data.udir.no/kl06/fagkoder'},
+  ]).pipe(gulp.dest(dataDest));
+  cb();
+});
+
+
 
 /*
  * build less files to css, prefix and minify
