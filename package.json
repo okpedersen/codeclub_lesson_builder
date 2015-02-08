@@ -50,5 +50,11 @@
   "bugs": {
     "url": "https://github.com/arve0/codeclub_lesson_builder/issues"
   },
-  "homepage": "https://github.com/arve0/codeclub_lesson_builder"
+  "homepage": "https://github.com/arve0/codeclub_lesson_builder",
+  "devDependencies": {
+    "request": "^2.53.0",
+    "xml2json": "^0.5.1",
+    "xmldom": "^0.1.19",
+    "xpath": "0.0.9"
+  }
 }
