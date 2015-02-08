@@ -10,7 +10,7 @@ var json_filepath = "./grepudir.json";
 request(api_url, function(error, response, body) {
     if(!error && response.statusCode==200) {
       var doc = new dom().parseFromString(body);
-      var entries = xpath.select('//entries', doc);
+      var entries = xpath.select('//entry', doc);
       console.log(entries);
     }
 });
