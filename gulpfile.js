@@ -10,7 +10,6 @@ var addsrc = require('gulp-add-src');
 var del = require('del');
 var run = require('run-sequence');
 var request = require('request');
-var async = require('async');
 var merge = require('merge-stream');
 var _ = require('lodash');
 // html building

@@ -35,7 +35,7 @@
     "run-sequence": "^1.0.2",
     "request": "^2.53.0",
     "through": "^2.3.6",
-yaml-front-matter": "^3.2.3"
+    "yaml-front-matter": "^3.2.3"
   },
   "napa": {
     "scratchblocks2": "blob8108/scratchblocks2#f6aecc77a9"
